@@ -1,0 +1,14 @@
+---
+- name: adding new uer
+  hosts: webservers
+  become: true
+  tasks:
+  - name: add new user 
+    user:
+      name: shriram
+      password: "p@ss123"
+      groups: sudo
+      state: present
+      shell: bin/bash
+      createhome: yes
+      
