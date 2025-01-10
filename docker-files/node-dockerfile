@@ -1,0 +1,13 @@
+FROM node
+
+WORKDIR /home
+
+COPY . /home/
+RUN npm install
+#RUN npm install -r requirements.txt
+
+EXPOSE 3000
+
+ENTRYPOINT [ "npm" ]
+
+CMD [ "start" ]
